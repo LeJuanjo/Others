@@ -1,5 +1,6 @@
 
 import streamlit as st
+from PIL import Image
 # Everything is accessible via the st.secrets dict:
 
 
@@ -41,4 +42,5 @@ def check_password():
 
 if check_password():
     st.write("Here goes your normal Streamlit app...")
-    st.button("Click me")
+    image = Image.open('istockphoto-140472118-1024x1024.jpg')
+    st.image(image)
